@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <style>
+      /* Add your custom styles here */
+.header {
+  margin-top: 0px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+  background-color: #f8f9fa;
+  background-image: url("{{ url_for('static', filename='img/12.jpg') }}");
+  
+  padding: 100px 0;
+}
+
+.products {
+  padding: 50px 0;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+.card-img-top{
+  width: 350px;
+  height: 350px;
+}
+
+.img-fluid{
+  width: 400px;
+  height: 600px;
+  margin-right: 0px;
+  text-align:right;
+  position: relative;
+
+}
+.btn{
+  background-color: #dc8d8d;
+  color: black;
+  margin: 20px;
+  border: #333;
+}
+.btn:hover{
+  background-color: #8d4949;
+
+}
+h1{
+  color: #8d4949;
+}
+h2{
+  color: #dc8d8d;
+}
+strong{
+  color: #8d4949;
+}
+
+    </style>
+</head>
+
+<body>
+
+
+<section class="hero">
+<div class="container">
+
+<header class="header"  style="margin-top: 0px;">
+    <nav class="navbar navbar-expand-lg navbar " >
+        <div class="container">
+            <img style="height: 70px ; width: 80px;margin:0px;padding:0px;" src="{{ url_for('static', filename='img/logo.png') }}" />
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                   
+                    <li class="nav-item">
+                        <a onclick="scrollToParagraph()" class="nav-link" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a onclick="scroltohow()" class="nav-link" href="#">How To </a>
+                    </li>
+                    <li class="nav-item">
+                        <a onclick="scrolcontact()" class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <h1>Welcome to our E-commerce Store</h1>
+                <p>Discover amazing products and great deals!</p>
+                <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="products">
+    <div  class="container" id="paragraph3">
+        <h1 class="text-center">Featured Products</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename='img/2.jpg') }}" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Kids Makeup</h5>
+                        <p class="card-text">Buy AWEFRANK Kids Makeup Kit for Girls Toys, Toddler Makeup Set,</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename='img/89.jpg') }}" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Make up Work</h5>
+                        <p class="card-text">this make up it's only for profesion day you kane make it if you ganna to works </p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename='img/9.jpg') }}" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Make up beautiful </h5>
+                        <p class="card-text">this make up its for beautiful day and berday also for events and shopping day</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="d-grid gap-2">
+  <button onclick="scrollToParagraph()" class="btn btn-primary" type="button">SHOP NOW</button>
+</div>
+
+<section class="makeup-tips" style="background-color: rgb(249, 249, 249);">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <img src="{{ url_for('static', filename='img/makeup-looks-1.jpg') }}" class="img-fluid" alt="Makeup Tips Image">
+          </div>
+          <div  class="col-md-6">
+              <h2 id="howto">How to Apply Makeup</h2>
+              <p> <strong>1. Start</strong> with a clean face. Make sure your skin is moisturized and primed before applying makeup.</p>
+              <p> <strong>2. Apply</strong>  foundation evenly to even out your skin tone. Choose a shade that matches your skin tone.</p>
+              <p> <strong>3. Conceal</strong>  any blemishes or dark circles with a concealer that matches your skin tone.</p>
+              <p><strong>4. Define</strong>  your eyebrows using an eyebrow pencil or powder to fill in any sparse areas.</p>
+              <p><strong>5. Apply</strong>  eyeshadow to your eyelids, starting with a base color and adding darker shades to the crease for depth.</p>
+              <p><strong>6. Line</strong>  your upper lash line with eyeliner for a defined look. Optional: Apply eyeliner to your lower lash line for a more dramatic effect.</p>
+              <p><strong>7. Curl</strong>  your lashes with an eyelash curler and apply mascara for volume and length.</p>
+              <p><strong>8. Add</strong>  blush to the apples of your cheeks for a healthy flush of color.</p>
+              <p><strong>9. Finish</strong>  with a lipstick or lip gloss in a shade that complements your makeup look.</p>
+              <p><strong>10. Set your makeup</strong>  with a setting spray to ensure it lasts all day.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<div class="d-grid gap-2 col-6 mx-auto">
+  <button onclick="scrollToParagraph()" class="btn btn-primary" type="button">SHOP NOW</button>
+</div>
+
+<section style="margin-top: 50px;" class="remove-makeup-section">
+  <div class="container">
+      <div class="row">
+          <div style="margin-top: 60px;" class="col-md-6">
+              <h2>How to Remove Makeup</h2>
+              <p>Removing makeup is an essential step in any skincare routine. Here's a simple guide:</p>
+              <ul style="list-style-type:none">
+                  <li><strong>Step 1:</strong> Start by washing your hands to remove any dirt or bacteria.</li>
+                  <li><strong>Step 2:</strong> Use a gentle makeup remover or cleansing oil to dissolve makeup, focusing on areas with heavy makeup such as eyes and lips.</li>
+                  <li><strong>Step 3:</strong> Gently massage the makeup remover onto your skin in circular motions.</li>
+                  <li><strong>Step 4:</strong> Rinse your face with lukewarm water to remove the makeup remover and makeup residue.</li>
+                  <li><strong>Step 5:</strong> Follow up with a gentle facial cleanser to remove any remaining traces of makeup and impurities.</li>
+                  <li><strong>Step 6:</strong> Pat your face dry with a clean towel.</li>
+                  <li><strong>Step 7:</strong> Apply a hydrating toner and moisturizer to replenish moisture and soothe the skin.</li>
+                  <li><strong>Step 8:</strong> Don't forget to wash your makeup brushes and sponges regularly to prevent buildup of bacteria.</li>
+              </ul>
+          </div>
+          <div class="col-md-6">
+              <img src="{{ url_for('static', filename='img/removemakeup.jpg') }}" class="img-fluid" alt="Remove Makeup Image">
+          </div>
+      </div>
+  </div>
+</section>
+
+<div class="d-grid gap-2 col-6 mx-auto">
+  <button onclick="scrollToParagraph()" class="btn btn-primary" type="button">SHOP NOW</button>
+</div>
+
+<section style="margin-top: 70px;" class="after-makeup-care-section">
+  <div class="container">
+      <div class="row">
+          <div  class="col-md-6">
+              <img style="margin-top: 50px;" src="{{ url_for('static', filename='img/clean.jpg') }}" class="img-fluid" alt="After Makeup Care Image">
+          </div>
+          <div class="col-md-6">
+              <h2>How to Take Care of Your Face After Makeup</h2>
+              <p>Proper post-makeup care is essential to keep your skin healthy and radiant. Here are some tips:</p>
+              <ul style="list-style-type:none">
+                  <li><strong>1. Cleanse:</strong> Start by thoroughly cleansing your face to remove all traces of makeup and impurities. Use a gentle cleanser suitable for your skin type.</li>
+                  <li><strong>2. Hydrate:</strong> After cleansing, apply a hydrating facial moisturizer to replenish moisture lost during makeup application. Choose a moisturizer that suits your skin type.</li>
+                  <li><strong>3. Treat:</strong> If you have specific skincare concerns such as acne or dryness, apply targeted treatments such as acne spot treatment or hydrating serums.</li>
+                  <li><strong>4. Protect:</strong> Apply a broad-spectrum sunscreen with SPF 30 or higher to protect your skin from harmful UV rays. Sunscreen is essential even on cloudy days.</li>
+                  <li><strong>5. Rest:</strong> Allow your skin to rest and breathe by going makeup-free whenever possible, especially at night. This allows your skin to regenerate and repair itself.</li>
+                  <li><strong>6. Stay Hydrated:</strong> Drink plenty of water throughout the day to keep your skin hydrated from within. Hydration is crucial for maintaining healthy skin.</li>
+                  <li><strong>7. Avoid Touching Your Face:</strong> Try to avoid touching your face frequently, as this can transfer bacteria and lead to breakouts. If you need to touch your face, make sure your hands are clean.</li>
+                  <li><strong>8. Remove Makeup Before Bed:</strong> Always remove your makeup before going to bed to prevent clogged pores and breakouts. Use a gentle makeup remover or cleansing oil followed by a facial cleanser.</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+<footer class="footer" id="contact">
+    <div class="container text-center">
+        <p style="margin-bottom: 0px;">&copy;<img style="width: 150px;" src="{{ url_for('static', filename='img/logo.png') }}" alt=""> 
+          <div>2024 Beuty Store. All rights reserved.</div>
+          <span>Email : <b>beautystore@gmail.com</b></span> <b>|</b>
+          <span>Phone  : <b>06444444444</b></span>
+        </p>
+
+        
+    </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+
+  <script>
+    function scrollToParagraph() {
+        // Scroll to the target paragraph
+        document.getElementById('paragraph3').scrollIntoView({ behavior: 'smooth' });
+    }
+    function scroltohow(){
+      document.getElementById('howto').scrollIntoView({ behavior: 'smooth' });
+    }
+    function scrolcontact(){
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
